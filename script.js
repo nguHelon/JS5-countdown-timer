@@ -18,7 +18,7 @@ function getRemainingTime() {
     const today = currenDate.getTime();
     let time = futureTime - today;
 
-    // to get the days, hours, minutes in seconds
+    // to get the days, hours, minutes in miliseconds
     const oneDay = 24 * 60 * 60 * 1000;
     const oneHour = 60 * 60 * 1000;
     const oneMinute = 60 * 1000;
@@ -29,10 +29,10 @@ function getRemainingTime() {
     // ** get the remaining hours in one specific day.
     let hours = Math.floor((time % oneDay) / oneHour);
 
-    // ** get the remaining hours in one specific day.
+    // ** get the remaining minues in one specific hour.
     let minutes = Math.floor((time % oneHour) / oneMinute);
 
-    // ** get the remaining hours in one specific day.
+    // ** get the remaining seconds in one specific minute.
     let seconds = Math.floor((time % oneMinute) / 1000);
 
     // using an array to store the days, hours, mins and secs because it has the same amount an index with the item nodelist above.
